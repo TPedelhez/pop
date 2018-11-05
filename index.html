@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>getUserMedia Demo</title>
+    <title>POP with getUserMedia</title>
     <style>
       body
       {
@@ -15,8 +15,16 @@
       h1
       {
         text-align: center;
+        font-family: Helvetica;
       }
-         
+
+      h2
+      {
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+
       .buttons-wrapper
       {
         text-align: center;
@@ -48,7 +56,8 @@
     </style>
   </head>
   <body>
-    <h1>getUserMedia API</h1>
+    <h1>POP</h1>
+    <h2>with getUserMedia API technology</h2>
     <video id="video" autoplay="autoplay" controls="true"></video>
     <div class="buttons-wrapper">
       <button id="button-play-gum" class="button-demo" href="#">Play demo</button>
@@ -87,7 +96,7 @@
         document.getElementById('button-play-gum').addEventListener('click', function() {
           // Capture user's audio and video source
           navigator.getUserMedia({
-            video: true,
+            video: false,
             audio: true
           },
           function(stream) {
